@@ -1,0 +1,14 @@
+{
+  "name": "boooky",
+  "version": "1.0.0",
+  "description": "Boooky - new platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "boooky"
+  ],
+  "author": "Jasur Mirboboyev",
+  "license": "ISC"
+}
