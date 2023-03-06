@@ -12,13 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/components/contrGraph/style.css" />
   </head>
   <body>
-    <nav>
-
-    </nav>
+    <nav></nav>
     <div class="wrapper">
-        <!-- Profile info => Left box -->
+      <!-- Profile info => Left box -->
       <div class="profileBox profileLeftBox">
         <div class="squareBackground">
           <div class="pr_infoBox">
@@ -47,16 +46,35 @@
         </div>
       </div>
       <div class="profileBox profileCenterBox">
+
         <div class="squareBackground">
-            Table
         </div>
 
-    </div>
-    <!-- Right Box -->
+        <div class="squareBackground">
+          Aktiv kunlaringiz
+          <div class="contributions">
+            <!-- Contribution squares will be added dynamically with JavaScript -->
+          </div>
+          <div class="yearsBox">
+            <select class="select" name="pr_activeYears" id="pr_activeYears">
+              <optgroup>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+              </optgroup>
+              <span class="arrow">&#9660;</span>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Right Box -->
       <div class="profileBox profileRightBox">
         <div class="squareBackground">
-            Column
-        </div></div>
+          Column
+        
+        </div>
+      </div>
     </div>
+
+    <script src="/components/contrGraph/app.js"></script>
   </body>
 </html>
