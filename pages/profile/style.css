@@ -82,8 +82,8 @@ body {
 }
 
 .pr_avatar img {
-  width: 150px;
-  height: 150px;
+  width: 250px !important;
+  height: 150px !important;
   aspect-ratio: 1/1;
 }
 .pr_titulBox {
@@ -192,7 +192,8 @@ body {
   padding: 10px 20px;
   color: #FFF;
   font-size: 18px;
-  background: linear-gradient( to bottom, #aed6f1, #85c1e9, #5dade2, #3498db, #ffffff );
+  background-image: linear-gradient(to bottom right, #2E86C1, #2980B9, #3498DB, #5DADE2, #85C1E9);
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -207,7 +208,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient( to bottom, #aed6f1, #85c1e9, #5dade2, #3498db, #ffffff );
+  background-image: linear-gradient(to bottom right, #2E86C1, #2980B9, #3498DB, #5DADE2, #85C1E9);
+  cursor: pointer;
   min-height: 30px;
   max-height: 50px;
   margin: 5px 10px;
@@ -487,6 +489,7 @@ body {
   position: absolute;
   bottom: 30px;
   color: #fff;
+  font-size: 14px;
 }
 .pr_vipLocked .pr_vipIcon {
   font-size: 22px;

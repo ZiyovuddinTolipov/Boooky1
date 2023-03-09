@@ -348,3 +348,8 @@ Usage: codyhouse.co/license
       grid-column-end: span 9;
     }
   }
+
+.foo_img{
+  width: 150px;
+  height: 150px;
+}
