@@ -17,11 +17,11 @@ body {
 
   /* background: linear-gradient(90deg, #4f6acc 10%, #0968D8 100%); */
 }
-nav {
+/* nav {
   height: 50px;
   width: 100%;
   background-color: crimson;
-}
+} */
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -56,6 +56,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 .pr_infoBox {
   width: 100%;
@@ -109,11 +110,11 @@ nav {
 }
 
 .pr_details {
-  height: 600px;
-  min-height: 75%;
+  min-height: 700px;
   max-height: max-content;
   width: 100%;
-  padding: 40px 20px;
+  padding: 20px 20px;
+  position: relative;
 }
 
 .pr_param {
@@ -127,7 +128,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 75%;
   margin: 0 auto 20px;
   padding: 12px 24px;
   font-size: 16px;
@@ -164,17 +165,86 @@ nav {
   font-size: 14px;
 }
 .pr_listDetail {
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    font-weight: 500;
-
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
-.pr_listDetail a svg{
-    font-size: 24px;
-    margin-right: 25px;
-  }
+.pr_listDetail a svg {
+  font-size: 20px;
+  margin-right: 25px;
+}
+.pr_langs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pr_lang{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 80px;
+  font-weight: 600;
+  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 18px;
+  background: linear-gradient( to bottom, #aed6f1, #85c1e9, #5dade2, #3498db, #ffffff );
+  border-radius: 5px;
+}
 
-/* Profile Center ox */
+.pr_interests{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pr_interest{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient( to bottom, #aed6f1, #85c1e9, #5dade2, #3498db, #ffffff );
+  min-height: 30px;
+  max-height: 50px;
+  margin: 5px 10px;
+  border-radius: 50px;
+  /* height: 40px; */
+  min-width: 80px;
+  max-width: max-content;
+  font-weight: 600;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+  color: #FFF;
+  font-size: 18px;
+}
+
+.pr_logOut {
+  position: absolute;
+  bottom: 20px;
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+    border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.pr_logOut:hover {
+  background-color: #ff7263;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* Profile Center Box */
 .profileCenterBox {
   height: 95%;
 }
@@ -430,4 +500,13 @@ nav {
   z-index: 10;
   color: #fff;
   font-size: 30px;
+}
+
+
+
+/* Footer */
+
+footer{
+  margin-top: 200px;
+  width: 100% !important; 
 }

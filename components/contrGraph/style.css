@@ -32,15 +32,15 @@ body {
 }
 
 .contribution.color-2 {
-  background-color: #3fc463;
+  background-color: #3fc44a;
 }
 
 .contribution.color-3 {
-  background-color: #30a14e;
+  background-color: #30a137;
 }
 
 .contribution.color-4 {
-  background-color: #216e39;
+  background-color: #216e21;
 }
 
 /* Weekday label styles */
@@ -99,7 +99,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 2  0px;
+  margin-bottom: 2px;
 }
 
 .month {
