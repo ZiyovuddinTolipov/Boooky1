@@ -171,20 +171,17 @@ Usage: codyhouse.co/license
   .mf1-btn:active {
     transform: translateY(2px);
   }
-  
+  /* sadasdasdasdasdasdasdasdsd */
   .mf1-btn--primary {
-    background: hsl(var(--mf1-color-primary-hsl));
+    background-image: linear-gradient(to bottom right, #2E86C1, #2980B9, #3498DB, #5DADE2, #85C1E9);
+    /* background: hsl(var(--mf1-color-primary-hsl)); */
     color: hsl(var(--mf1-color-white-hsl));
     box-shadow: inset 0px 1px 0px hsla(var(--mf1-color-white-hsl), 0.15), 0px 1px 3px hsla(var(--mf1-color-primary-darker-hsl), 0.25), 0px 2px 6px hsla(var(--mf1-color-primary-darker-hsl), 0.1), 0px 6px 10px -2px hsla(var(--mf1-color-primary-darker-hsl), 0.25);
   }
   
   .mf1-btn--primary:hover {
-    background: hsl(var(--mf1-color-primary-light-hsl));
+    background-image: linear-gradient(to bottom right, #2E86C1,#3498DB, #2980B9, #85C1E9 ,#5DADE2);
     box-shadow: inset 0px 1px 0px hsla(var(--mf1-color-white-hsl), 0.15), 0px 1px 2px hsla(var(--mf1-color-primary-darker-hsl), 0.25), 0px 1px 4px hsla(var(--mf1-color-primary-darker-hsl), 0.1), 0px 3px 6px -2px hsla(var(--mf1-color-primary-darker-hsl), 0.25);
-  }
-  
-  .mf1-btn--primary:focus {
-    box-shadow: inset 0px 1px 0px hsla(var(--mf1-color-white-hsl), 0.15), 0px 1px 2px hsla(var(--mf1-color-primary-darker-hsl), 0.25), 0px 1px 4px hsla(var(--mf1-color-primary-darker-hsl), 0.1), 0px 3px 6px -2px hsla(var(--mf1-color-primary-darker-hsl), 0.25), 0px 0px 0px 2px hsl(var(--mf1-color-bg-hsl)), 0px 0px 0px 4px hsl(var(--mf1-color-primary-hsl));
   }
   
   .mf1-btn--subtle {
