@@ -27,7 +27,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 1440px;
+  width: 2040px;
   height: 100vh;
   gap: 2rem;
 }
