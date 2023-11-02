@@ -16,6 +16,8 @@ import Stack from '@mui/joy/Stack';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom";
 // import {
 //   CssVarsProvider,
 //   useColorScheme,
@@ -44,6 +46,7 @@ function ColorSchemeToggle({ onClick, ...props }) {
   useEffect(() => {
     setMounted(true);
   }, []);
+  
 
   if (!mounted) {
     return <IconButton size="sm" variant="outlined" color="neutral" disabled />;
@@ -72,6 +75,58 @@ function ColorSchemeToggle({ onClick, ...props }) {
 }
 
 export default function Register() {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+                  const data = {
+                    first_name: event.target.first_name.value,
+                    username: event.target.username.value,
+                    password: event.target.password.value,
+                    persistent: event.target.persistent.checked,
+                  };
+                  const base64Credentials = btoa(`${data.username}:${data.password}`);
+                  const headers = {
+                    // 'Authorization': `Basic ${base64Credentials}`,
+                    'Content-Type': 'application/json',
+                }
+                fetch("https://boookyuz.pythonanywhere.com/signup/", {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify(data),
+              })
+                  .then((response) => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                  })
+                  .then((result) => {
+                    // Handle the response data here
+                      toast.success("Ro'yxatdan o'tdingiz!");
+                      console.log(result);
+                      navigate("/")
+                      localStorage.setItem('token', result.token);
+                      localStorage.setItem('staff', result.staff);
+                      localStorage.setItem('user_id', result.id);
+      
+                      // result.staff=="librarian" ? navigate("/admin"):navigate("/library");
+                      // setToken(result.token)
+                      // setStaff(result.staff)
+                      // navigate("/library");
+                      // setFormData({
+                      //     password: '',
+                      //     username: '',
+                      //     // Boshqa inputlarni tozalash
+                      // });
+                  })
+                  .catch((error) => {
+                      // Handle errors here
+                      toast.error("Login yoki parol noto'g'ri")
+                      console.error('Error:', error);
+                  });
+                  // alert(JSON.stringify(data, null, 2));
+                }
+  
   return (
     <CssVarsProvider defaultMode="dark" disableTransitionOnChange>
       <CssBaseline />
@@ -132,7 +187,7 @@ export default function Register() {
               <IconButton variant="soft" color="primary" size="sm">
                 <BadgeRoundedIcon />
               </IconButton>
-              <Typography level="title-lg">Company logo</Typography>
+              <Typography level="title-lg">Boooky</Typography>
             </Box>
             <ColorSchemeToggle />
           </Box>
@@ -185,19 +240,14 @@ export default function Register() {
             </Divider>
             <Stack gap={4} sx={{ mt: 2 }}>
               <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  const data = {
-                    email: event.target.email.value,
-                    password: event.target.password.value,
-                    persistent: event.target.persistent.checked,
-                  };
-                  alert(JSON.stringify(data, null, 2));
-                }}
-              >
+                onSubmit={handleSubmit}>
                 <FormControl required>
-                  <FormLabel>Email</FormLabel>
-                  <Input type="email" name="email" />
+                  <FormLabel>Ism Familiya</FormLabel>
+                  <Input type="text" name="first_name" />
+                </FormControl>
+                <FormControl required>
+                  <FormLabel>Username</FormLabel>
+                  <Input type="text" name="username" />
                 </FormControl>
                 <FormControl required>
                   <FormLabel>Password</FormLabel>
@@ -212,7 +262,7 @@ export default function Register() {
                     }}
                   >
                     <Checkbox size="sm" label="Remember me" name="persistent" />
-                    <Link level="title-sm" href="#replace-with-a-link">
+                    <Link level="title-sm" to="#replace-with-a-link">
                       Forgot your password?
                     </Link>
                   </Box>

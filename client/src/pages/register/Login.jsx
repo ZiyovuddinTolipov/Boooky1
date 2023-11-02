@@ -8,7 +8,7 @@ import Checkbox from '@mui/joy/Checkbox';
 import Divider from '@mui/joy/Divider';
 import FormControl from '@mui/joy/FormControl';
 import FormLabel, { formLabelClasses } from '@mui/joy/FormLabel';
-// import IconButton, { IconButtonProps } from '@mui/joy/IconButton';
+import IconButton from '@mui/joy/IconButton';
 import Link from '@mui/joy/Link';
 import Input from '@mui/joy/Input';
 import Typography from '@mui/joy/Typography';
@@ -16,6 +16,8 @@ import Stack from '@mui/joy/Stack';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom";
 // import {
 //   CssVarsProvider,
 //   useColorScheme,
@@ -44,6 +46,7 @@ function ColorSchemeToggle({ onClick, ...props }) {
   useEffect(() => {
     setMounted(true);
   }, []);
+  
 
   if (!mounted) {
     return <IconButton size="sm" variant="outlined" color="neutral" disabled />;
@@ -71,7 +74,58 @@ function ColorSchemeToggle({ onClick, ...props }) {
   );
 }
 
-export default function Login() {
+export default function Register() {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+                  const data = {
+                    username: event.target.username.value,
+                    password: event.target.password.value,
+                    persistent: event.target.persistent.checked,
+                  };
+                  const base64Credentials = btoa(`${data.username}:${data.password}`);
+                  const headers = {
+                    'Authorization': `Basic ${base64Credentials}`,
+                    'Content-Type': 'application/json',
+                }
+                fetch("https://boookyuz.pythonanywhere.com/login/", {
+                  method: 'POST',
+                  headers: headers,
+                  body: JSON.stringify(data),
+              })
+                  .then((response) => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                  })
+                  .then((result) => {
+                    // Handle the response data here
+                      toast.success("Ro'yxatdan o'tdingiz!");
+                      console.log(result);
+                      navigate("/")
+                      localStorage.setItem('token', result.token);
+                      localStorage.setItem('staff', result.staff);
+                      localStorage.setItem('user_id', result.id);
+      
+                      // result.staff=="librarian" ? navigate("/admin"):navigate("/library");
+                      // setToken(result.token)
+                      // setStaff(result.staff)
+                      // navigate("/library");
+                      // setFormData({
+                      //     password: '',
+                      //     username: '',
+                      //     // Boshqa inputlarni tozalash
+                      // });
+                  })
+                  .catch((error) => {
+                      // Handle errors here
+                      toast.error("Login yoki parol noto'g'ri")
+                      console.error('Error:', error);
+                  });
+                  // alert(JSON.stringify(data, null, 2));
+                }
+  
   return (
     <CssVarsProvider defaultMode="dark" disableTransitionOnChange>
       <CssBaseline />
@@ -132,7 +186,7 @@ export default function Login() {
               <IconButton variant="soft" color="primary" size="sm">
                 <BadgeRoundedIcon />
               </IconButton>
-              <Typography level="title-lg">Company logo</Typography>
+              <Typography level="title-lg">Boooky</Typography>
             </Box>
             <ColorSchemeToggle />
           </Box>
@@ -158,11 +212,11 @@ export default function Login() {
           >
             <Stack gap={4} sx={{ mb: 2 }}>
               <Stack gap={1}>
-                <Typography level="h3">Sign in</Typography>
+                <Typography level="h3">Kirish</Typography>
                 <Typography level="body-sm">
-                  New to company?{" "}
+                  Sizda hisob mavjud emasmi?{" "}
                   <Link href="#replace-with-a-link" level="title-sm">
-                    Sign up!
+                    {" Ro'yxatdan o'tish!"}
                   </Link>
                 </Typography>
               </Stack>
@@ -185,19 +239,10 @@ export default function Login() {
             </Divider>
             <Stack gap={4} sx={{ mt: 2 }}>
               <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  const data = {
-                    email: event.target.email.value,
-                    password: event.target.password.value,
-                    persistent: event.target.persistent.checked,
-                  };
-                  alert(JSON.stringify(data, null, 2));
-                }}
-              >
+                onSubmit={handleSubmit}>
                 <FormControl required>
-                  <FormLabel>Email</FormLabel>
-                  <Input type="email" name="email" />
+                  <FormLabel>Username</FormLabel>
+                  <Input type="text" name="username" />
                 </FormControl>
                 <FormControl required>
                   <FormLabel>Password</FormLabel>
@@ -212,7 +257,7 @@ export default function Login() {
                     }}
                   >
                     <Checkbox size="sm" label="Remember me" name="persistent" />
-                    <Link level="title-sm" href="#replace-with-a-link">
+                    <Link level="title-sm" to="#replace-with-a-link">
                       Forgot your password?
                     </Link>
                   </Box>
