@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Register from '../pages/register/Register'
 import Login from '../pages/register/Login'
 import Profil from '../pages/profil/Profil'
+import Chat from '../pages/chat/Chat'
 
 // Pages
 
@@ -28,6 +29,10 @@ const Routs = createBrowserRouter([
     {
         path: '/profil',
         element: <Profil />
+    },
+    {
+        path: '/chat',
+        element: <Chat />
     },
     {
         path: '/*',
