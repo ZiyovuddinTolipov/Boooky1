@@ -9,7 +9,6 @@ import Divider from '@mui/joy/Divider';
 import FormControl from '@mui/joy/FormControl';
 import FormLabel, { formLabelClasses } from '@mui/joy/FormLabel';
 import IconButton from '@mui/joy/IconButton';
-import Link from '@mui/joy/Link';
 import Input from '@mui/joy/Input';
 import Typography from '@mui/joy/Typography';
 import Stack from '@mui/joy/Stack';
@@ -17,7 +16,7 @@ import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
 import { toast } from "react-toastify"
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link} from "react-router-dom";
 // import {
 //   CssVarsProvider,
 //   useColorScheme,
@@ -213,11 +212,11 @@ export default function Register() {
           >
             <Stack gap={4} sx={{ mb: 2 }}>
               <Stack gap={1}>
-                <Typography level="h3">Sign in</Typography>
+                <Typography level="h3">Ro'yxatdan o'tish</Typography>
                 <Typography level="body-sm">
-                  New to company?{" "}
-                  <Link href="#replace-with-a-link" level="title-sm">
-                    Sign up!
+                  Sizda hisob mavjudmi?{" "}
+                  <Link to="/login" >
+                    Kirish
                   </Link>
                 </Typography>
               </Stack>
@@ -250,7 +249,7 @@ export default function Register() {
                   <Input type="text" name="username" />
                 </FormControl>
                 <FormControl required>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>Parol</FormLabel>
                   <Input type="password" name="password" />
                 </FormControl>
                 <Stack gap={4} sx={{ mt: 2 }}>
@@ -261,9 +260,9 @@ export default function Register() {
                       alignItems: "center",
                     }}
                   >
-                    <Checkbox size="sm" label="Remember me" name="persistent" />
-                    <Link level="title-sm" to="#replace-with-a-link">
-                      Forgot your password?
+                    <Checkbox size="sm" label="parolni eslab qolish" name="persistent" />
+                    <Link  to="#replace-with-a-link">
+                      Parolni unutdim?
                     </Link>
                   </Box>
                   <Button type="submit" fullWidth>

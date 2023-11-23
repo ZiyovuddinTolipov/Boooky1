@@ -1,18 +1,20 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from "../pages/Home"
 import Register from '../pages/register/Register'
 import Login from '../pages/register/Login'
 import Profil from '../pages/profil/Profil'
 import Chat from '../pages/chat/Chat'
-
+import ProfilePage from '../pages/profil/Profil_UI'
+import RatingList from '../pages/ratingList/Users'
 // Pages
 
 
 const Routs = createBrowserRouter([
     {
         path: '/',
-        element: <>Hello Home</>
+        element: <Home />
     },
     {
         path: '/news',
@@ -29,6 +31,14 @@ const Routs = createBrowserRouter([
     {
         path: '/profil',
         element: <Profil />
+    },
+    {
+        path: `/users/:id`,
+        element: <ProfilePage />
+    },
+    {
+        path: `/users`,
+        element: <RatingList />
     },
     {
         path: '/chat',
