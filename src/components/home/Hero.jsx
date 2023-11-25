@@ -19,8 +19,8 @@ const Hero = () => {
     };
 
     const style = {
-        container: "min-h-[450px] lg:h-[350px] sm:h-[600px]  sm:pt-3 sm:px-10 lg:px-0 md:pt-6 pt-8 flex flex-col sm:flex-col sm:w-full lg:flex-row px-4 max-w-[1400px] mx-auto mt-4 md:mt-10",
-        swiperADS: `h-full rounded-2xl sm:w-full lg:w-[70%] sm:h-[300px] lg:h-full `,
+        container: "min-h-[450px] lg:h-[500px] sm:h-[600px]  sm:pt-3 sm:px-10 lg:px-0 md:pt-6 pt-8 flex flex-col sm:flex-col sm:w-full lg:flex-row px-4 max-w-[1400px] mx-auto mt-4 md:mt-10",
+        swiperADS: `h-full rounded-2xl sm:w-full  sm:h-[300px] lg:h-full `,
         sliderADS: `bg-slate-800 text-white text-center min-h-[350px]`,
         discount:` rounded-2xl px-4 lg:ml-5 sm:mx-0 sm:my-5 lg:my-0 w-full sm:w-full lg:w-[30%] sm:h-[300px] lg:h-full min-h-[300px] `
     }
@@ -74,7 +74,7 @@ const Hero = () => {
                     <SwiperSlide key={item.id} className={`${style.sliderADS}`} style={{ background: `url('${item.sliderImg}') no-repeat center`, backgroundSize: "cover" }}>
                         <div className="flex justify-center flex-col items-center min-h-full">
                             <h3 className='text-xl bg-black/50 p-4 rounded-md'>{item.sliderInfo}</h3>
-                            <a  className="bg-blue-600 p-3 mt-4 rounded-md" href={item.sliderURL}>Batafsil</a>
+                            <a  className="bg-blue-600 py-2 px-3 mt-4 rounded-md text-white" href={item.sliderURL}>Batafsil</a>
                         </div>
                     </SwiperSlide>
                 ))}
@@ -85,9 +85,7 @@ const Hero = () => {
                     <span ref={progressContent}></span>
                 </div>
             </Swiper >
-            <div className={style.discount} style={{background:`url(${discountImg}) no-repeat center`, backgroundSize: "cover"}} >
-                    {/* <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsa possimus non corporis labore, recusandae, fugiat vel eveniet ipsam nobis nostrum expedita neque quam repellendus nihil porro aliquid quia eos.</h1> */}
-            </div>
+            
         </section>
     )
 }
