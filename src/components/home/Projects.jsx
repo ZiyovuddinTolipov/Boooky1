@@ -46,16 +46,27 @@ const Projects = () => {
                 }}
             >
                 <SwiperSlide className={style.sliderDiv}>
-                    {({ isActive }) => (
-                        <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-                    )}
+                    <h1>Slider 1</h1>
+                    <h3>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nisi?
+                    </h3>
                 </SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 2</SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 3</SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 4</SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 5</SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 6</SwiperSlide>
-                <SwiperSlide className={style.sliderDiv}>Slide 7</SwiperSlide>
+                <SwiperSlide className={style.sliderDiv}>
+                    <h1>Slide 2</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, libero.</h3>
+                </SwiperSlide>
+                <SwiperSlide className={style.sliderDiv}>
+                    <h1>Slide 3</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, libero.</h3>
+                </SwiperSlide>
+                <SwiperSlide className={style.sliderDiv}>
+                    <h1>Slide 4</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, libero.</h3>
+                </SwiperSlide>
+                <SwiperSlide className={style.sliderDiv}>
+                    <h1>Slide 5</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, libero.</h3>
+                </SwiperSlide>
             </Swiper>
         </div>
     )
