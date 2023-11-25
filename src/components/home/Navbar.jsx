@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import {BiMenuAltRight} from "react-icons/bi";
 const Navbar = () => {
@@ -14,12 +15,13 @@ const Navbar = () => {
                         <option value="spanish">Spanish</option>
                     </select>
                 </li>
-                <li className="py-2 px-3 bg-[#3A5AFF] text-white rounded-md">Sign In</li>
-                <li className="py-2 px-3 text-[#979797] border-2 border-[#979797] rounded-md">Login in</li>
+                <Link className="py-2 px-3 " to='/rating'>rating</Link>
+                <Link className="py-2 px-3 bg-[#3A5AFF] text-white rounded-md" to='/register'>Sign In</Link>
+                <Link className="py-2 px-3 text-[#979797] border-2 border-[#979797] rounded-md" to="/login">Login in</Link>
                 <li className="py-2 px-3  rounded-md"><BiMenuAltRight size={40} className="text-[#3A5AFF]"/></li>
             </ul>
         </nav>
     )
 }
 
-export default Navbar
+export default Navbar;

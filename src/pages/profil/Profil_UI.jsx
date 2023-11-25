@@ -1,4 +1,4 @@
-import React, { useState,  useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MDBCol,
   MDBContainer,
@@ -18,43 +18,43 @@ import {
 } from 'mdb-react-ui-kit';
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css"; 
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function ProfilePage() {
-  
-  
+
+
   const [userData, setUserData] = useState(null);
-  
+
   // useEffect(() => {
-    async function fetchData() {
-      try {
-        // Replace 'userId' with the actual user ID you want to retrieve
-        const currentURL = window.location.href;
-        // Split the URL by '/' and get the last part
-        const parts = currentURL.split('/');
-        let userId = parts[parts.length - 1];
-        
-        // Construct the API URL with the user ID
-        const apiUrl = `https://boookyuz.pythonanywhere.com/users/${userId}`;
+  async function fetchData() {
+    try {
+      // Replace 'userId' with the actual user ID you want to retrieve
+      const currentURL = window.location.href;
+      // Split the URL by '/' and get the last part
+      const parts = currentURL.split('/');
+      let userId = parts[parts.length - 1];
 
-        // Make an HTTP GET request to the API
-        const response = await fetch(apiUrl);
+      // Construct the API URL with the user ID
+      const apiUrl = `https://boookyuz.pythonanywhere.com/users/${userId}`;
 
-        // Check if the response status is OK (status code 200)
-        if (response.ok) {
-          // Parse the response as JSON
-          const data = await response.json();
-          console.log(data);
-          setUserData(data); // Set the retrieved data in state
-        } else {
-          console.error(`API request failed with status: ${response.status}`);
-        }
-      } catch (error) {
-        console.error('An error occurred:', error);
+      // Make an HTTP GET request to the API
+      const response = await fetch(apiUrl);
+
+      // Check if the response status is OK (status code 200)
+      if (response.ok) {
+        // Parse the response as JSON
+        const data = await response.json();
+        console.log(data);
+        setUserData(data); // Set the retrieved data in state
+      } else {
+        console.error(`API request failed with status: ${response.status}`);
       }
+    } catch (error) {
+      console.error('An error occurred:', error);
     }
+  }
 
-    fetchData();
+  fetchData();
   // }, []);
 
   console.log(userData);
@@ -133,7 +133,7 @@ export default function ProfilePage() {
               <MDBCardBody>
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>{}</MDBCardText>
+                    <MDBCardText>{ }</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
                     <MDBCardText className="text-muted">Johnatan Smith</MDBCardText>

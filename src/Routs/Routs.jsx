@@ -1,6 +1,4 @@
-import * as React from 'react'
-import * as ReactDom from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import Home from "../pages/Home"
 import Register from '../pages/register/Register'
 import Login from '../pages/register/Login'
