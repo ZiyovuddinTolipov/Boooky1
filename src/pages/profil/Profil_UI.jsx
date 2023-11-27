@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import  { useState } from 'react';
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Aside from './components/Aside';
 import SolvedProblems from './components/SolvedProblems';
+import Badges from './components/Badges';
 
 export default function ProfilePage() {
 
@@ -51,9 +52,7 @@ export default function ProfilePage() {
         <section className='w-[70%]'>
           <div className='flex flex-col gap-3'>
             <SolvedProblems />
-            <div className='bg-[#282828] rounded-lg text-slate-300 p-3 min-h-[150px]'>
-              <h6>Badges</h6>
-            </div>
+            <Badges />
           </div>
           <div className='bg-[#282828]'>
           </div>
