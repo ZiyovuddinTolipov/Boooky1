@@ -34,11 +34,11 @@ const Results = () => {
                 </div>
             </nav>
             <div className="min-h-[200px] flex flex-col items-center justify-center text-slate-300 ">
-                <img src="img" alt="img" />
+                <img src="https://leetcode.com/_next/static/images/null_light-53585615fd723ba992bd2df7a10d10d1.png" alt="img" width={100}/>
                 <p>no recent submissions</p>
             </div>
         </>
     )
 }
 
-export default Results
+export default Results;
