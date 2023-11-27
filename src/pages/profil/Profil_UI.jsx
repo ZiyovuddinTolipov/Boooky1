@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Aside from './components/Aside';
 import SolvedProblems from './components/SolvedProblems';
 import Badges from './components/Badges';
+import Results from './components/Results';
 
 export default function ProfilePage() {
 
@@ -45,21 +46,21 @@ export default function ProfilePage() {
   console.log(userData);
   return (
     <main className='bg-[#1A1A1A] w-full min-h-[100vh]'>
-      <div className='w-full max-w-[1400px] mx-auto flex gap-3 pt-10'>
-        <aside className='w-[30%] bg-[#282828] rounded-lg p-4 min-h-[90vh]'>
+      <div className='w-full max-w-[1400px] mx-auto flex flex-col sm:flex-row gap-3 pt-10'>
+        <div className='w-full sm:w-1/3 bg-[#282828] rounded-lg p-4 min-h-[90vh]'>
           <Aside />
-        </aside>
-        <section className='w-[70%]'>
-          <div className='flex flex-col gap-3'>
+        </div>
+        <div className='w-full sm:w-2/3 flex flex-col gap-2'>
+          <div className='flex flex-col lg:flex-row gap-3'>
             <SolvedProblems />
             <Badges />
           </div>
           <div className='bg-[#282828]'>
           </div>
-          <div className='bg-[#282828]'>
-
+          <div className='bg-[#282828] rounded-lg p-4'>
+            <Results />
           </div>
-        </section>
+        </div>
       </div>
     </main>
   );

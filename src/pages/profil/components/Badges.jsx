@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Badges = () => {
     return (
-        <div className='bg-[#282828] rounded-lg text-slate-300 p-3 min-h-[200px] flex flex-col justify-between'>
+        <div className='bg-[#282828] rounded-lg text-slate-300 p-3 min-h-[200px] flex flex-col justify-between w-100 lg:w-1/2'>
             <div>
                 <h6>Badges</h6>
                 <h5 className='text-white'>0</h5>

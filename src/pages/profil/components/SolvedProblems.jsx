@@ -2,7 +2,7 @@
 const SolvedProblems = () => {
     return (
         <>
-            <div className='bg-[#282828] rounded-lg text-slate-300 p-3 min-h-[150px]'>
+            <div className='bg-[#282828] rounded-lg text-slate-300 p-3 min-h-[150px] w-100 lg:w-1/2'>
                 <h6>Solved Problems</h6>
                 <div className='w-[100%] flex '>
                     <div className='w-[30%] flex items-center justify-center'>
