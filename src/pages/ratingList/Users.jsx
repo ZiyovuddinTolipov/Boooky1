@@ -79,7 +79,7 @@ const Users = () => {
                   <td>{user.last_name? user.last_name: <p className='text-red-500 bg-red-200 text-center py-1 rounded-md will-change-contents'>Kiritilmagan!</p>}</td>
                   <td>{user.first_name? user.first_name: "Kiritilmagan!"}</td>
                   <td className={user.staff=="admin"?"text-blue-800 uppercase font-semibold":""}>{user.staff}</td>
-                  <td>{user.email?user.email:user.username+"@boooky.uz"}</td>
+                  <td><Link to={"mailto:"+user.email?user.email:user.username+"@boooky.uz"}>{user.email?user.email:user.username+"@boooky.uz"}</Link></td>
                   <td>{user.coin?user.coin: "Mavjud emas"}</td>
                 </tr>
               ))}
