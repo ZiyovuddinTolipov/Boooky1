@@ -6,7 +6,10 @@ import Profil from '../pages/profil/Profil'
 import Chat from '../pages/chat/Chat'
 import ProfilePage from '../pages/profil/Profil_UI'
 import RatingList from '../pages/ratingList/Users'
-// Pages
+import Courses from '../pages/courses/Courses'
+// Courses Pages
+
+import CoursesHome from "../components/courses/Home"
 
 
 const Routs = createBrowserRouter([
@@ -41,6 +44,14 @@ const Routs = createBrowserRouter([
     {
         path: '/chat',
         element: <Chat />
+    },
+    {
+        path: '/courses/*',
+        element: <Courses />
+    },
+    {
+        path: '/home',
+        element: <CoursesHome />
     },
     {
         path: '/*',
