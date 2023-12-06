@@ -8,11 +8,15 @@ const Results = () => {
     const sty = {
         navBtn: "text-slate-100 md:space-x-2 flex items-center rounded-[5px] px-3 py-[10px] font-mediumwhitespace-nowrap"
     }
-    const notFound =
-        <>
-            <img src="https://leetcode.com/_next/static/images/null_light-53585615fd723ba992bd2df7a10d10d1.png" alt="img" width={100} />
-            <p>no recent submissions</p>
-        </>
+    const notFound = () => {
+        return (
+            <>
+                <img src="https://leetcode.com/_next/static/images/null_light-53585615fd723ba992bd2df7a10d10d1.png" alt="img" width={100} />
+                <p>no recent submissions</p>
+            </>
+        )
+    }
+
 
     const [selectedButton, setSelectedButton] = useState(localStorage.getItem('profile-results') || 'profile-results-recent');
     const handleButtonClick = (buttonName) => {
@@ -36,7 +40,7 @@ const Results = () => {
                         Recent AC
                     </button>
                     <button
-                        className={`${sty.navBtn} ${localStorage.getItem("profile-results")== "profile-results-solutions" ? "bg-zinc-400/20" : ""}`}
+                        className={`${sty.navBtn} ${localStorage.getItem("profile-results") == "profile-results-solutions" ? "bg-zinc-400/20" : ""}`}
                         onClick={() => handleButtonClick('profile-results-solutions')}
                     >
                         Solutions
