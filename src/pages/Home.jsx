@@ -6,7 +6,7 @@ import Work from "../components/home/Work"
 
 const Home = () => {
     return (
-        <main className="w-full bg-slate-950 py-[2.5em]">
+        <main className="w-full bg-slate-950 py-[.5em]">
             <Navbar />
             <Hero />
             <About />
