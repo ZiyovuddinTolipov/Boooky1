@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import {BiMenuAltRight} from "react-icons/bi";
 const Navbar = () => {
     return (
-        <header className="w-full border-slate-700 border-b">
-            <nav className="flex justify-between items-center font-semibold max-w-[1400px] mx-auto px-3  rounded-md">
+        <header className="w-full border-slate-700 border-b ">
+            <nav className="flex justify-between items-center font-semibold max-w-[1400px] mx-auto px-3 rounded-md">
             <div className="">
                 <h3 className="font-bold text-white ">BOOOKY.</h3>
             </div>

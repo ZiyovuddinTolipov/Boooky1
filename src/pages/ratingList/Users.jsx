@@ -38,10 +38,10 @@ const Users = () => {
   };
 
   return (
-    <div className="table">
-      <section className="table__header">
+    <div className="table bg-slate-950">
+      <section className="flex justify-between items-center w-100 bg-slate-950">
         <h1>Foydalanuvchilar reytingi</h1>
-        <div className="input-group">
+        <div className="input-group ">
           <input
             type="search"
             placeholder="Search Data..."

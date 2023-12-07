@@ -1,0 +1,35 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    bottom: 0px;
+    left: -100px;
+    background: linear-gradient(to bottom, #f0c575 40%, #f1a20d 50%);
+    filter: blur(50px);
+    z-index:-1;
+    top: -30px;
+    left: -20px;
+}
+.circle2 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #7091f5 40%, #7091f5 50%);
+    filter: blur(50px);
+    z-index:-1;
+    top: -30px;
+    left: -20px;
+}
+.circle3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #dd1919 40%, #dd1919 50%);
+    filter: blur(50px);
+    z-index:-1;
+    top: -30px;
+    left: -20px;
+}
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}

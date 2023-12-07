@@ -5,6 +5,7 @@ import "./style.css";
 import Routs from "./Routs/Routs";
 import { RouterProvider } from "react-router-dom";
 import "./i18n";
+import "./scss/all.scss";
 
 // primereact
 import { PrimeReactProvider } from 'primereact/api';

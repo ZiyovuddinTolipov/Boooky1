@@ -8,12 +8,11 @@ import 'swiper/css';
 
 const Projects = () => {
     const style = {
-        sliderDiv: "h-[200px] bg-black mx-3 text-white text-center",
-
+        sliderDiv: "h-[200px] border-2 duration-200 px-4 py-3 rounded-md text-white bg-slate-900/50 hover:bg-slate-900/80 border-blue-400",
     }
     return (
-        <div className='my-6'>
-            <h3 className='text-3xl font-semibold my-4 text-center'>Amazing things are happening</h3>
+        <div className='my-6 max-w-[1400px] mx-auto'>
+            <h3 className='text-3xl font-semibold my-4 text-center text-white'>Amazing things are happening</h3>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
