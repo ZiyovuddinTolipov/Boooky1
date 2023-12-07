@@ -1,27 +1,32 @@
+import { FaChevronRight } from "react-icons/fa";
 
 const About = () => {
+    const style={
+        cards:`border-2 duration-200 py-4 px-3 rounded-md text-white`
+    }
     return (
-        <main className="bg-[#F2F2F2] py-10 mt-10">
+        <main className="py-10 mt-10">
             <section className="max-w-[1400px] mx-auto">
-                <h2 className="text-center text-4xl font-bold">Lorem ipsum dolor sit.</h2>
-                <p className="text-center text-xl mt-3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, numquam.</p>
-                <div className="flex my-5">
-                    <div>
+                <h2 className="text-center text-4xl font-bold text-white">Lorem ipsum dolor sit.</h2>
+                <p className="text-center text-xl mt-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, numquam.</p>
+                <div className="flex my-5 gap-4">
+                    <div className={`bg-blue-300/30 shadow shadow-blue-500/40 hover:shadow-indigo-500/40 hover:bg-blue-300/20 border-blue-400 ${style.cards} `}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
                                 <rect width="50" height="50" rx="19" fill="#3A5AFF" />
                                 <path d="M26.1 14.9358L25.5 15.1615L24.9 14.9358C23.0984 14.2504 21.1645 13.9353 19.2255 14.011C17.2865 14.0868 15.3864 14.5517 13.65 15.3753L13 15.7079V35L14.8125 34.1447C16.2278 33.4772 17.7751 33.1004 19.3538 33.039C20.9325 32.9776 22.5071 33.2329 23.975 33.7883L25.5 34.3704L27.025 33.7883C28.4929 33.2329 30.0675 32.9776 31.6462 33.039C33.2249 33.1004 34.7722 33.4772 36.1875 34.1447L38 35V15.7079L37.3125 15.3753C35.5812 14.5569 33.6876 14.0947 31.7556 14.019C29.8235 13.9433 27.8964 14.2557 26.1 14.9358ZM19.85 30.6403C18.3718 30.6384 16.9029 30.863 15.5 31.3055V17.2047C18.2088 16.1358 21.2499 16.1144 23.975 17.1453L24.25 17.2523V31.353C22.8221 30.8855 21.3228 30.6446 19.8125 30.6403H19.85ZM35.5 31.3055C32.6611 30.4 29.5889 30.4 26.75 31.3055V17.2523L27.025 17.1453C29.7501 16.1144 32.7912 16.1358 35.5 17.2047V31.3055Z" fill="white" />
                             </svg>
                         </div>
-                        <h3 className="font-semibold my-4 text-2xl">At School</h3>
+                        <h3 className="font-semibold my-3 text-2xl">At School</h3>
                         <p className="font-[1rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea itaque id amet odit veritatis,
                             commodi nostrum eaque iusto dignissimos soluta!
                         </p>
-                        <button className="mt-4 font-semibold text-xl">
-                            learn more
+                        <button className="mt-4 font-semibold text-sm border border-blue-300 py-1 px-3 rounded-2xl bg-blue-300/30 hover:bg-blue-300/40 hover:border-blue-500 text-white backdrop-blur-sm  flex items-center gap-2 ">
+                            <span>learn more </span>
+                            <FaChevronRight />
                         </button>
                     </div>
-                    <div>
+                    <div className={`bg-orange-500/20 hover:bg-orange-600/20 border-blue-400 ${style.cards} `}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
                                 <g clipPath="url(#clip0_0_549)">
@@ -39,11 +44,12 @@ const About = () => {
                         <p className="font-[1rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea itaque id amet odit veritatis,
                             commodi nostrum eaque iusto dignissimos soluta!
                         </p>
-                        <button className="mt-4 font-semibold text-xl">
-                            learn more
+                        <button className="mt-4 font-semibold text-sm border border-blue-300 py-1 px-3 rounded-2xl bg-blue-300/30 hover:bg-blue-300/40 hover:border-blue-500 text-white backdrop-blur-sm  flex items-center gap-2 ">
+                            <span>learn more </span>
+                            <FaChevronRight />
                         </button>
                     </div>
-                    <div>
+                    <div className={`bg-blue-300/30 hover:bg-blue-300/20 border-blue-400 ${style.cards} `}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
                                 <rect width="50" height="50" rx="19" fill="#3A5AFF" />
@@ -54,11 +60,12 @@ const About = () => {
                         <p className="font-[1rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea itaque id amet odit veritatis,
                             commodi nostrum eaque iusto dignissimos soluta!
                         </p>
-                        <button className="mt-4 font-semibold text-xl">
-                            learn more
+                        <button className="mt-4 font-semibold text-sm border border-blue-300 py-1 px-3 rounded-2xl bg-blue-300/30 hover:bg-blue-300/40 hover:border-blue-500 text-white backdrop-blur-sm  flex items-center gap-2 ">
+                            <span>learn more </span>
+                            <FaChevronRight />
                         </button>
                     </div>
-                    <div>
+                    <div className={`bg-blue-300/30 hover:bg-blue-300/20 border-blue-400 ${style.cards} `}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
                                 <rect width="50" height="50" rx="19" fill="#3A5AFF" />
@@ -69,8 +76,9 @@ const About = () => {
                         <p className="font-[1rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea itaque id amet odit veritatis,
                             commodi nostrum eaque iusto dignissimos soluta!
                         </p>
-                        <button  className="mt-4 font-semibold text-xl">
-                            learn more
+                        <button className="mt-4 font-semibold text-sm border border-blue-300 py-1 px-3 rounded-2xl bg-blue-300/30 hover:bg-blue-300/40 hover:border-blue-500 text-white backdrop-blur-sm  flex items-center gap-2 ">
+                            <span>learn more </span>
+                            <FaChevronRight />
                         </button>
                     </div>
                 </div>
